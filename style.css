@@ -1,0 +1,33 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+#header {
+    background-color:white;
+    height: 50px;
+    width: 1045px;
+    padding: 20px 10px 20px 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+#menu {
+    background-color:white;
+    height: 1000px;
+    width: 300px;
+    padding: 20px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#space {
+    background-color:white;
+    height: 1000px;
+    width: 700px;
+    padding: 20px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
