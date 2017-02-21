@@ -194,13 +194,10 @@ function googleTranslateElementInit() {
                   if (document.cookie.length == "") {
                     document.cookie = "lesson=1; expires=Wed, 01 Jan 2019 00:00:01 GMT";
                     alert("The cookie = " + document.cookie);
-                    for (i = 1; i <= 5; i++){
-                      document.getElementById("MenuLessons").children[i].style.display = "none";
-                    }
                   }
                     var iNum = document.cookie.split("=");
 		            alert("The cookie = " + iNum[1]);
-                    for (i = 1; i <= iNum[1]; i++){
+                    for (i = 0; i < iNum[1]; i++){
                       document.getElementById("MenuLessons").children[i].style.display = "block";
                     }
 
