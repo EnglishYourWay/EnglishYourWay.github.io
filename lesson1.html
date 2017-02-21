@@ -210,8 +210,10 @@ function googleTranslateElementInit() {
 
                 function plusSlides(n) {
 
+                if (n > 0){
 			    alert(slideIndex + 1);
                 document.cookie = "lesson=" + (slideIndex + 1) + "; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                }
                 showSlides(slideIndex += n);
                 }
 
