@@ -41,7 +41,6 @@
 								<section>
 									<header class="main">
 										<h1 id="Title">Lesson 1</h1>
-                    <p id = "demo"> </p>
 									</header>
 
                                     <!--Instrucciones -->
@@ -192,10 +191,11 @@ function googleTranslateElementInit() {
 
                   if (document.cookie.length == "") {
                     document.cookie = "lesson=1; expires=Wed, 01 Jan 2019 00:00:01 GMT";
-                    alert("The cookie = " + document.cookie);
                   }
+
                     var iNum = document.cookie.split("=");
-		            alert("The cookie = " + iNum[1]);
+                    showSlides(iNum);
+                    document.getElementById("Title").innerHTML = "Lesson " + iNum;
                     for (var i = 1; i <= iNum[1]; i++){
                       document.getElementById(i).style.display = "block";
                     }
@@ -207,8 +207,9 @@ function googleTranslateElementInit() {
                 function plusSlides(n) {
 
                 if (n > 0){
-			    alert(slideIndex + 1);
                 document.cookie = "lesson=" + (slideIndex + 1) + "; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                document.getElementById(slideIndex + 1).style.display = "block";
+                document.getElementById("Title").innerHTML = "Lesson " + (slideIndex + 1);
                 }
                 showSlides(slideIndex += n);
                 }
