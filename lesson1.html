@@ -131,11 +131,11 @@
 										<li>
 											<span class="opener">Lessons</span>
 											<ul id = "MenuLessons">
-												<li><a class="lessons" onclick="setSlide(1)">Lesson 1</a></li>
-												<li><a class="lessons" onclick="setSlide(2)">Lesson 2</a></li>
-												<li><a class="lessons" onclick="setSlide(3)">Lesson 3</a></li>
-												<li><a class="lessons" onclick="setSlide(4)">Lesson 4</a></li>
-                        <li><a class="lessons" onclick="setSlide(5)">Lesson 5</a></li>
+												<li><a class="lessons" onclick="currentSlide(1)">Lesson 1</a></li>
+												<li><a class="lessons" onclick="currentSlide(2)" style="display:none">Lesson 2</a></li>
+												<li><a class="lessons" onclick="currentSlide(3)" style="display:none">Lesson 3</a></li>
+												<li><a class="lessons" onclick="currentSlide(4)" style="display:none">Lesson 4</a></li>
+                                                <li><a class="lessons" onclick="currentSlide(5)" style="display:none">Lesson 5</a></li>
 											</ul>
 										</li>
                                         <li><a href="#">About us</a></li>
@@ -215,10 +215,6 @@ function googleTranslateElementInit() {
                 document.cookie = "lesson=" + (slideIndex + 1) + "; expires=Wed, 01 Jan 2019 00:00:01 GMT";
                 }
                 showSlides(slideIndex += n);
-                }
-
-                function setSlide(n) {
-                  showSlides(slideIndex = n);
                 }
 
                 function currentSlide(n) {
