@@ -40,7 +40,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Lesson 1</h1>
+										<h1 id="Title">Lesson 1</h1>
                     <p id = "demo"> </p>
 									</header>
 
@@ -197,22 +197,22 @@ function googleTranslateElementInit() {
                     for (i = 1; i <= 5; i++){
                       document.getElementById("MenuLessons").children[i].style.display = "none";
                     }
-                  } 
+                  }
                     var iNum = document.cookie.split("=");
-		    alert("The cookie = " + iNum[1]);
+		            alert("The cookie = " + iNum[1]);
                     for (i = 1; i <= iNum[1]; i++){
                       document.getElementById("MenuLessons").children[i].style.display = "block";
                     }
-                  
+
                 }
 
 
 
                 function plusSlides(n) {
-			
-			alert(slideIndex);
-                    document.cookie = "lesson=" + slideIndex + "; expires=Wed, 01 Jan 2019 00:00:01 GMT";
-                    showSlides(slideIndex += n);
+
+			    alert(slideIndex + 1);
+                document.cookie = "lesson=" + (slideIndex + 1) + "; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                showSlides(slideIndex += n);
                 }
 
                 function setSlide(n) {
