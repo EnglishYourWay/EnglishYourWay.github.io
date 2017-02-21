@@ -130,7 +130,7 @@
 										<li>
 											<span class="opener">Lessons</span>
 											<ul>
-												<li><a id="1"class="lessons" onclick="currentSlide(1)">Lesson 1</a></li>
+												<li><a id="1" class="lessons" onclick="currentSlide(1)">Lesson 1</a></li>
 												<li><a id="2" class="lessons" onclick="currentSlide(2)" style="display:none;">Lesson 2</a></li>
 												<li><a id="3" class="lessons" onclick="currentSlide(3)" style="display:none;">Lesson 3</a></li>
 												<li><a id="4" class="lessons" onclick="currentSlide(4)" style="display:none;">Lesson 4</a></li>
@@ -194,8 +194,6 @@ function googleTranslateElementInit() {
                   }
 
                     var iNum = document.cookie.split("=");
-                    showSlides(iNum);
-                    document.getElementById("Title").innerHTML = "Lesson " + iNum;
                     for (var i = 1; i <= iNum[1]; i++){
                       document.getElementById(i).style.display = "block";
                     }
