@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="assets/css/slideshow.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
 	</head>
-	<body>
+	<body onload="CheckCookies()">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -41,15 +41,16 @@
 								<section>
 									<header class="main">
 										<h1>Lesson 1</h1>
+                    <p id = "demo"> </p>
 									</header>
-                                    
+
                                     <!--Instrucciones -->
                                     <section>
                                         <h4>Language selection:</h4>
                                         <div id="google_translate_element"></div><br>
-                                        
+
                                     </section>
-                                    
+
                                     <!--Leccion -->
                                     <section>
                                         <div class="slideshow-container">
@@ -72,14 +73,14 @@
                                                 <button onclick="plusSlides(-1)">Previous</button>
                                                 <button onclick="plusSlides(1)">Next</button></center>
                                             </div>
-                                            
+
                                             <div class="mySlides fade">
                                                 <center>Time for a test <br> La idea es usar este programa Quizlet </center>
                                                 <center><iframe src="https://quizlet.com/189982357/learn/embed" height="500" width="100%" style="border:0"></iframe> <br>
                                                 <button onclick="plusSlides(-1)">Previous</button>
                                                 <button onclick="plusSlides(1)">Next</button></center>
                                             </div>
-                                            
+
                                             <div class="mySlides fade">
                                                 <center>Story time <br> La idea aqui es poner historias y luego preguntas, se puede hacer con powtoons y playbuzz(es un programa para hacer quizzes) </center>
                                                 <center><iframe width="700" height="510" src="https://www.youtube.com/embed/TeZPLagn9Hg" frameborder="0" allowfullscreen></iframe> <br>
@@ -87,20 +88,20 @@
                                                 <button onclick="location.href='facebook.com'">Next Lesson</button></center>
                                                 <br>
                                             </div>
-                                            
-                                            
+
+
 
                                         </div>
-                                        
-                                        
-                                    </section>
-                                    
-                                    <!-- mas info -->
-                                    <section>
-                                        
+
+
                                     </section>
 
-									
+                                    <!-- mas info -->
+                                    <section>
+
+                                    </section>
+
+
 								</section>
 
 						</div>
@@ -110,7 +111,7 @@
 					<div id="sidebar">
 						<div class="inner">
 
-							<!-- Search 
+							<!-- Search
 								<section id="search" class="alt">
 									<form method="post" action="#">
 										<input type="text" name="query" id="query" placeholder="Search" />
@@ -118,9 +119,9 @@
 								</section> -->
 
 							<!-- Menu -->
-                            
-                                <center><a href="index.html"><img src="images/logorect.png" style="height:70px" alt="English your way"></a></center> 
-                            
+
+                                <center><a href="index.html"><img src="images/logorect.png" style="height:70px" alt="English your way"></a></center>
+
 								<nav id="menu">
 									<header class="major">
 										<h2>Menu</h2>
@@ -129,11 +130,12 @@
                                         <li><a href="index.html">Homepage</a></li>
 										<li>
 											<span class="opener">Lessons</span>
-											<ul>
-												<li><a class="lessons" href="lesson1.html">Lesson 1</a></li>
-												<li><a class="lessons" href="#">Lesson 2</a></li>
-												<li><a class="lessons" href="#">Lesson 3</a></li>
-												<li><a class="lessons" href="#">Lesson 4</a></li>
+											<ul id = "MenuLessons">
+												<li><a class="lessons" onclick="setSlide(1)">Lesson 1</a></li>
+												<li><a class="lessons" onclick="setSlide(2)">Lesson 2</a></li>
+												<li><a class="lessons" onclick="setSlide(3)">Lesson 3</a></li>
+												<li><a class="lessons" onclick="setSlide(4)">Lesson 4</a></li>
+                        <li><a class="lessons" onclick="setSlide(5)">Lesson 5</a></li>
 											</ul>
 										</li>
                                         <li><a href="#">About us</a></li>
@@ -141,7 +143,7 @@
 									</ul>
 								</nav>
 
-							<!-- Section 
+							<!-- Section
 								<section>
 									<header class="major">
 										<h2>Get in touch</h2>
@@ -155,7 +157,7 @@
 									</ul>
 								</section> -->
 
-							<!-- Footer 
+							<!-- Footer
 								<footer id="footer">
 									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer> -->
@@ -171,19 +173,47 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-        
+
         <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        
+
         <script>
+
+
+
                 var slideIndex = 1;
                 showSlides(slideIndex);
+                var slideSaved = getCookie("lesson");
+
+
+                function CheckCookies () {
+
+                  if (document.cookie.length == "") {
+                    document.cookie = "lesson=1; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                    alert("The cookie = " + document.cookie);
+                    for (i = 1; i <= 5; i++){
+                      document.getElementById("MenuLessons").children[i].style.display = "none";
+                    }
+                  } else {
+                    var iNum = document.cookie.split("=");
+                    for (i = 1; i <= iNum[1]; i++){
+                      document.getElementById("MenuLessons").children[i].style.display = "block";
+                    }
+                  }
+                }
+
+
 
                 function plusSlides(n) {
                     showSlides(slideIndex += n);
+                    document.cookie = "lesson=" + n + "; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                }
+
+                function setSlide(n) {
+                  showSlides(slideIndex = n);
                 }
 
                 function currentSlide(n) {
@@ -194,19 +224,19 @@ function googleTranslateElementInit() {
                     var i;
                     var slides = document.getElementsByClassName("mySlides");
                     var dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) {slideIndex = 1} 
+                    if (n > slides.length) {slideIndex = 1}
                     if (n < 1) {slideIndex = slides.length}
                     for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none"; 
+                        slides[i].style.display = "none";
                     }
                     for (i = 0; i < dots.length; i++) {
                         dots[i].className = dots[i].className.replace(" active", "");
                     }
-                    slides[slideIndex-1].style.display = "block"; 
+                    slides[slideIndex-1].style.display = "block";
                     dots[slideIndex-1].className += " active";
                 }
             </script>
-        
+
 
 	</body>
 </html>
