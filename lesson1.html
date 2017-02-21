@@ -209,9 +209,10 @@ function googleTranslateElementInit() {
 
 
                 function plusSlides(n) {
-                    showSlides(slideIndex += n);
+			
 			alert(slideIndex);
                     document.cookie = "lesson=" + slideIndex + "; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                    showSlides(slideIndex += n);
                 }
 
                 function setSlide(n) {
