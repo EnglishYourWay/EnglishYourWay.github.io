@@ -188,6 +188,7 @@ function googleTranslateElementInit() {
 
                 function CheckCookies () {
                   var iNum = document.cookie.split("=");
+                  alert(iNum);
                   if (iNum[1] < 3) {
                     document.cookie = "lesson=3; expires=Wed, 01 Jan 2019 00:00:01 GMT";
                   }
