@@ -198,7 +198,14 @@ function googleTranslateElementInit() {
                 // document.getElementById("Title").innerHTML = "Lesson " + (slideIndex + 1);
                 // }
 
+                  if (document.cookie.length = "") {
+                    document.cookie = "lesson=2; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                  }
 
+                  var iNum = document.cookie.split("=");
+                    for (var i = 1; i <= iNum[1]; i++){
+                      document.getElementById(i).style.display = "block";
+                    }
                 showSlides(slideIndex += n);
                 }
 
@@ -224,14 +231,7 @@ function googleTranslateElementInit() {
 
                 function CheckCookies () {
 
-                  if (document.cookie.length = "") {
-                    document.cookie = "lesson=2; expires=Wed, 01 Jan 2019 00:00:01 GMT";
-                  }
 
-                  var iNum = document.cookie.split("=");
-                    for (var i = 1; i <= iNum[1]; i++){
-                      document.getElementById(i).style.display = "block";
-                    }
 
                 }
             </script>
