@@ -46,7 +46,7 @@
                                     <!-- Arbol de lecciónes -->
                                     <section style="width:800px">
                                         <center><h2>Select a lesson</h2></center>
-                                        
+
                                         <table >
                                             <tr>
                                                 <td style="width:200px">
@@ -85,7 +85,7 @@
                                         <table>
                                             <tr>
                                                 <td style="width:200px">
-                                                    <center><button onclick="window.location.href='lesson2.html'">Lesson 2</button></center> <br>
+                                                    <center><button id="8" onclick="window.location.href='lesson2.html'" disabled="">Lesson 2</button></center> <br>
                                                     <h4 style="text-align: center;">Topic</h4>
                                                 </td>
                                                 <td>
@@ -118,7 +118,7 @@
                                         <table>
                                             <tr>
                                                 <td style="width:200px">
-                                                    <center><button onclick="window.location.href='lesson3.html'">Lesson 3</button></center> <br>
+                                                    <center><button id ="9" onclick="window.location.href='lesson3.html'"  disabled="">Lesson 3</button></center> <br>
                                                     <h4 style="text-align: center;">Topic</h4>
                                                 </td>
                                                 <td>
@@ -151,7 +151,7 @@
                                         <table>
                                             <tr>
                                                 <td style="width:200px">
-                                                    <center><button onclick="window.location.href='lesson4.html'">Lesson 4</button></center> <br>
+                                                    <center><button id="10" onclick="window.location.href='lesson4.html'" disabled="">Lesson 4</button></center> <br>
                                                     <h4 style="text-align: center;">Topic</h4>
                                                 </td>
                                                 <td>
@@ -213,7 +213,7 @@
                                         <li><a href="index.html">Homepage</a></li>
 										<li>
 											<span class="opener">Lessons</span>
-											<ul>												
+											<ul>
                                                 <li><a id="1" class="lessons" href="lessonsnav.html">View lessons plan</a></li>
 												<li><a id="2" class="lessons" href="lesson1.html">Lesson 1</a></li>
                                                 <li><a id="3" class="lessons" href="lesson2.html" style="display:none;">Lesson 2</a></li>
@@ -271,18 +271,7 @@ function googleTranslateElementInit() {
                 showSlides(slideIndex);
 
 
-                function CheckCookies () {
 
-                  if (document.cookie.indexOf("lesson") < 0) {
-                    document.cookie = "lesson=2; expires=Wed, 01 Jan 2019 00:00:01 GMT";
-                  }
-
-                  var iNum = document.cookie.split("=");
-                    for (var i = 1; i <= iNum[1]; i++){
-                      document.getElementById(i).style.display = "block";
-                    }
-
-                }
 
 
 
@@ -316,6 +305,29 @@ function googleTranslateElementInit() {
                     }
                     slides[slideIndex-1].style.display = "block";
                     dots[slideIndex-1].className += " active";
+                }
+
+                function CheckCookies () {
+
+                  if (document.cookie.indexOf("lesson") < 0) {
+                    document.cookie = "lesson=2; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                  }
+
+
+
+                  var iNum = document.cookie.split("=");
+                    for (var i = 1; i <= iNum[1]; i++){
+                      document.getElementById(i).style.display = "block";
+                    }
+                    for (var i = 3; i <= iNum[1]; i++){
+                      document.getElementById(i + 5).disabled = false;
+                    }
+
+                }
+
+                window.onload = function()
+                {
+                CheckCookies;
                 }
 
 
