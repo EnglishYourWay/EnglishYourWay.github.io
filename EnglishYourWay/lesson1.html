@@ -192,17 +192,6 @@ function googleTranslateElementInit() {
                 showSlides(slideIndex);
 
 
-                function CheckCookies () {
-
-                document.cookie = "lesson=3; expires=Wed, 01 Jan 2019 00:00:01 GMT";
-
-
-                  var iNum = document.cookie.split("=");
-                    for (var i = 1; i <= iNum[1]; i++){
-                      document.getElementById(i).style.display = "block";
-                    }
-
-                }
 
 
 
@@ -237,6 +226,19 @@ function googleTranslateElementInit() {
                     slides[slideIndex-1].style.display = "block";
                     dots[slideIndex-1].className += " active";
                 }
+
+                function CheckCookies () {
+
+                document.cookie = "lesson=3; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+
+
+                  var iNum = document.cookie.split("=");
+                    for (var i = 1; i <= iNum[1]; i++){
+                      document.getElementById(i).style.display = "block";
+                    }
+
+                }
+
 
 
             </script>

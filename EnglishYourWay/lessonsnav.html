@@ -271,19 +271,7 @@ function googleTranslateElementInit() {
                 showSlides(slideIndex);
 
 
-                function CheckCookies () {
 
-                  if (document.cookie.indexOf("lesson") < 0) {
-                    document.cookie = "lesson=2; expires=Wed, 01 Jan 2019 00:00:01 GMT";
-                  }
-
-                  var iNum = document.cookie.split("=");
-                    for (var i = 1; i <= iNum[1]; i++){
-                      document.getElementById(i).style.display = "block";
-                      document.getElementById(i + "a").disabled = false;
-                    }
-
-                }
 
 
 
@@ -317,6 +305,20 @@ function googleTranslateElementInit() {
                     }
                     slides[slideIndex-1].style.display = "block";
                     dots[slideIndex-1].className += " active";
+                }
+
+                function CheckCookies () {
+
+                  if (document.cookie.indexOf("lesson") < 0) {
+                    document.cookie = "lesson=2; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                  }
+
+                  var iNum = document.cookie.split("=");
+                    for (var i = 1; i <= iNum[1]; i++){
+                      document.getElementById(i).style.display = "block";
+                      document.getElementById(i + "a").disabled = false;
+                    }
+
                 }
 
 
