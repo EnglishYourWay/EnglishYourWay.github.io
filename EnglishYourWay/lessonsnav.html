@@ -46,7 +46,7 @@
                                     <!-- Arbol de lecciónes -->
                                     <section style="width:800px">
                                         <center><h2>Select a lesson</h2></center>
-                                        
+
                                         <table >
                                             <tr>
                                                 <td style="width:200px">
@@ -85,7 +85,7 @@
                                         <table>
                                             <tr>
                                                 <td style="width:200px">
-                                                    <center><button onclick="window.location.href='lesson2.html'">Lesson 2</button></center> <br>
+                                                    <center><button onclick="window.location.href='lesson2.html'" id="3a" disabled="disabled">Lesson 2</button></center> <br>
                                                     <h4 style="text-align: center;">Topic</h4>
                                                 </td>
                                                 <td>
@@ -118,7 +118,7 @@
                                         <table>
                                             <tr>
                                                 <td style="width:200px">
-                                                    <center><button onclick="window.location.href='lesson3.html'">Lesson 3</button></center> <br>
+                                                    <center><button onclick="window.location.href='lesson3.html'" id ="4a" disabled="disabled">Lesson 3</button></center> <br>
                                                     <h4 style="text-align: center;">Topic</h4>
                                                 </td>
                                                 <td>
@@ -151,7 +151,7 @@
                                         <table>
                                             <tr>
                                                 <td style="width:200px">
-                                                    <center><button onclick="window.location.href='lesson4.html'">Lesson 4</button></center> <br>
+                                                    <center><button onclick="window.location.href='lesson4.html'" id="5a" disabled="disabled">Lesson 4</button></center> <br>
                                                     <h4 style="text-align: center;">Topic</h4>
                                                 </td>
                                                 <td>
@@ -213,7 +213,7 @@
                                         <li><a href="index.html">Homepage</a></li>
 										<li>
 											<span class="opener">Lessons</span>
-											<ul>												
+											<ul>
                                                 <li><a id="1" class="lessons" href="lessonsnav.html">View lessons plan</a></li>
 												<li><a id="2" class="lessons" href="lesson1.html">Lesson 1</a></li>
                                                 <li><a id="3" class="lessons" href="lesson2.html" style="display:none;">Lesson 2</a></li>
@@ -280,6 +280,7 @@ function googleTranslateElementInit() {
                   var iNum = document.cookie.split("=");
                     for (var i = 1; i <= iNum[1]; i++){
                       document.getElementById(i).style.display = "block";
+                      document.getElementById(i + "a").disabled = false;
                     }
 
                 }
