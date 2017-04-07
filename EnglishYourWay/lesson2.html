@@ -124,8 +124,8 @@
 										<li>
 											<span class="opener">Lessons</span>
 											<ul>
-                                                <li><a id="1" class="lessons" href="lessonsnav.html">View lessons plan</a></li>
-												<li><a id="2" class="lessons" href="lesson1.html">Lesson 1</a></li>
+                                                <li><a id="1" class="lessons" href="lessonsnav.html" style="display:none;">View lessons plan</a></li>
+												<li><a id="2" class="lessons" href="lesson1.html" style="display:none;">Lesson 1</a></li>
                                                 <li><a id="3" class="lessons" href="lesson2.html" style="display:none;">Lesson 2</a></li>
 												<li><a id="4" class="lessons" href="lesson3.html" style="display:none;">Lesson 3</a></li>
 												<li><a id="5" class="lessons" href="lesson4.html" style="display:none;">Lesson 4</a></li>
@@ -209,17 +209,21 @@ function googleTranslateElementInit() {
                     dots[slideIndex-1].className += " active";
                 }
 
-                function CheckCookies () {
-                var iNum = document.cookie.split("=");
-                    if (iNum[1] == "2") {
-                      document.cookie = "lesson=3; expires=Wed, 01 Jan 2019 00:00:01 GMT";
-                    }
- 
-                    var iNum = document.cookie.split("=");
+                  function CheckCookies () {
+                  var iNum = document.cookie.split("=");
+                  if (iNum[1] == "3") {
+                    document.cookie = "lesson=4; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                  }
+
                     for (var i = 1; i <= iNum[1]; i++){
-                        document.getElementById(i).style.display = "block";
+                      document.getElementById(i).style.display = "block";
                     }
- 
+
+                }
+
+                window.onload = function()
+                {
+                CheckCookies;
                 }
 
             </script>
