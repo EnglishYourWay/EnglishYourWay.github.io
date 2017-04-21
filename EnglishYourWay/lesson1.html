@@ -277,7 +277,12 @@ function googleTranslateElementInit() {
                 showSlides(slideIndex);
 
 
+                window.addEventListener("keydown", myScript);
 
+
+                function myScript() {
+                    alert("HOLA");
+                }
 
                 function plusSlides(n) {
 
