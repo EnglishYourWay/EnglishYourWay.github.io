@@ -46,9 +46,9 @@
                                     <!--Leccion -->
                                     <section class="lessonbox">
                                         <div class="slideshow-container">
-                                            
+
                                             <!-- Set conversation -->
-                                            
+
                                             <div class="mySlides fade">
                                                 <text class="instrucciones">
                                                     Learn the following phrases by associating them to their images.
@@ -81,7 +81,7 @@
                                                 </div><br>
                                                 <center><button onclick="plusSlides(1)">Next</button></center>
                                             </div>
-                                            
+
                                             <div class="mySlides fade">
                                                 <text class="instrucciones">
                                                     Learn the following dialogues by relating questions to answers.
@@ -92,9 +92,9 @@
                                                 <center><button onclick="plusSlides(-1)">Previous</button>
                                                 <button onclick="plusSlides(1)">Next</button></center>
                                             </div>
-                                            
+
                                             <!-- SET vocabulary -->
-                                            
+
                                             <div class="mySlides fade">
                                                 <text class="instrucciones">
                                                     Learn the following words by associating them to their images.
@@ -105,7 +105,7 @@
                                                 <center><button onclick="plusSlides(-1)">Previous</button>
                                                 <button onclick="plusSlides(1)">Next</button></center>
                                             </div>
-                                            
+
                                             <div class="mySlides fade">
                                                 <text class="instrucciones">
                                                     Match the following pictures with their words.
@@ -115,7 +115,7 @@
                                                 </div>
                                                 <center><button onclick="plusSlides(-1)">Previous</button>
                                                 <button onclick="plusSlides(1)">Next</button></center>
-                                                
+
                                             </div>
 
                                             <div class="mySlides fade">
@@ -128,7 +128,7 @@
                                                 <center><button onclick="plusSlides(-1)">Previous</button>
                                                 <button onclick="plusSlides(1)">Next</button></center>
                                             </div>
-                                            
+
                                             <div class="mySlides fade">
                                                 <text class="instrucciones">
                                                     Write the word associated to the picture.
@@ -139,7 +139,7 @@
                                                 <center><button onclick="plusSlides(-1)">Previous</button>
                                                 <button onclick="plusSlides(1)">Next</button></center>
                                             </div>
-                                            
+
                                             <!-- SET hello, goodbye, you, me -->
 
                                             <div class="mySlides fade">
@@ -325,6 +325,22 @@ function googleTranslateElementInit() {
                 window.onload = function()
                 {
                 CheckCookies;
+                }
+
+                document.onkeydown = checkKey;
+
+                function checkKey(e) {
+
+                    e = e || window.event;
+
+                    if (e.keyCode == '38') {
+                        // up arrow
+                    }
+                    else if (e.keyCode == '40') {
+                        document.location.href="lesson2.html";
+                                alert("You pressed enter.");
+                    }
+
                 }
 
 
