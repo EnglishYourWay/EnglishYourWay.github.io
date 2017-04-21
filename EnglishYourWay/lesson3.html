@@ -182,6 +182,20 @@ function googleTranslateElementInit() {
 
 
 
+                document.onkeydown = checkKey;
+
+
+                function checkKey(e) {
+
+                    e = e || window.event;
+
+                    if (e.keyCode == '38') {
+                         window.location.href = "lesson4.html";
+                    }
+                    else if (e.keyCode == '40') {
+                        window.location.href = "lesson2.html";
+                    }
+                }
 
 
 

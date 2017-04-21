@@ -180,8 +180,20 @@ function googleTranslateElementInit() {
                 var slideIndex = 1;
                 showSlides(slideIndex);
 
+                document.onkeydown = checkKey;
 
 
+                function checkKey(e) {
+
+                    e = e || window.event;
+
+                    if (e.keyCode == '38') {
+                         window.location.href = "lesson3.html";
+                    }
+                    else if (e.keyCode == '40') {
+                        window.location.href = "lesson1.html";
+                    }
+                }
 
 
 

@@ -281,24 +281,7 @@ function googleTranslateElementInit() {
 
                 document.onkeydown = checkKey;
 
-                function checkKey(e) {
 
-                    e = e || window.event;
-
-                    if (e.keyCode == '38') {
-                        // up arrow
-                    }
-                    else if (e.keyCode == '40') {
-                        window.location.href = "lesson2.html";
-                    }
-                    else if (e.keyCode == '37') {
-                       // left arrow
-                    }
-                    else if (e.keyCode == '39') {
-                       // right arrow
-                    }
-
-                }
 
                 function plusSlides(n) {
 
@@ -344,7 +327,14 @@ function googleTranslateElementInit() {
 
                 }
 
+                function checkKey(e) {
 
+                    e = e || window.event;
+
+                   if (e.keyCode == '38') {
+                        window.location.href = "lesson2.html";
+                    }
+                }
 
                 window.onload = function()
                 {
