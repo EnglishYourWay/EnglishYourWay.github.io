@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body onload="CheckCookies()">
+    <element onkeydown="myScript">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -257,6 +258,13 @@ function googleTranslateElementInit() {
                 {
                 CheckCookies;
                 }
+
+                window.onkeydown = function(){myScript};
+
+
+                myScript() {
+                  alert("key pressed !");
+                };
 
 
             </script>
