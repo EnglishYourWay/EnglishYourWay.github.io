@@ -215,6 +215,14 @@ function googleTranslateElementInit() {
                 showSlides(slideIndex += n);
                 }
 
+                object.addEventListener("keydown", myScript);
+
+
+                function myFunction() {
+                    alert("HOLA");
+                }
+
+
                 function currentSlide(n) {
                     showSlides(slideIndex = n);
                 }
@@ -258,7 +266,6 @@ function googleTranslateElementInit() {
                 CheckCookies;
                 }
 
-                window.onkeydown = function(){alert("key pressed !");};
 
 
 
