@@ -190,13 +190,14 @@ function googleTranslateElementInit() {
                     e = e || window.event;
 
                     if (e.keyCode == '38') {
-                         window.location.href = "lesson4.html";
+                         plusSlides(1);
+                         //window.location.href = "lesson1.html";
                     }
                     else if (e.keyCode == '40') {
-                        window.location.href = "lesson2.html";
+                        plusSlides(-1);
+                        //window.location.href = "lesson3.html";
                     }
                 }
-
 
 
                 function plusSlides(n) {

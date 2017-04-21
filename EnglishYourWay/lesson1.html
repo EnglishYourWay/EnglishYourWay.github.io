@@ -331,8 +331,13 @@ function googleTranslateElementInit() {
 
                     e = e || window.event;
 
-                   if (e.keyCode == '38') {
-                        window.location.href = "lesson2.html";
+                    if (e.keyCode == '38') {
+                         plusSlides(1);
+                         //window.location.href = "lesson1.html";
+                    }
+                    else if (e.keyCode == '40') {
+                        plusSlides(-1);
+                        //window.location.href = "lesson3.html";
                     }
                 }
 
