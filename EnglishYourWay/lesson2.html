@@ -218,8 +218,9 @@ function googleTranslateElementInit() {
                         dots[i].className = dots[i].className.replace(" active", "");
                     }
                     slides[slideIndex-1].style.display = "block";
+                    if (dots[slideIndex-1] != null) {
                     dots[slideIndex-1].className += " active";
-                }
+                    }                }
 
                   function CheckCookies () {
                   var iNum = document.cookie.split("=");
