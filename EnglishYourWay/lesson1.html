@@ -277,11 +277,27 @@ function googleTranslateElementInit() {
                 showSlides(slideIndex);
 
 
-                window.addEventListener("keydown", myScript);
 
 
-                function myScript() {
-                    alert("HOLA");
+                document.onkeydown = checkKey;
+
+                function checkKey(e) {
+
+                    e = e || window.event;
+
+                    if (e.keyCode == '38') {
+                        // up arrow
+                    }
+                    else if (e.keyCode == '40') {
+                        alert("ALV");
+                    }
+                    else if (e.keyCode == '37') {
+                       // left arrow
+                    }
+                    else if (e.keyCode == '39') {
+                       // right arrow
+                    }
+
                 }
 
                 function plusSlides(n) {
@@ -335,7 +351,6 @@ function googleTranslateElementInit() {
                 CheckCookies;
                 }
 
-                document.onkeydown = checkKey;
 
 
 
