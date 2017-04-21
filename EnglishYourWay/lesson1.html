@@ -322,13 +322,6 @@ function googleTranslateElementInit() {
 
                 }
 
-                window.onload = function()
-                {
-                CheckCookies;
-                }
-
-                document.onkeydown = checkKey;
-
                 function checkKey(e) {
 
                     e = e || window.event;
@@ -342,6 +335,15 @@ function googleTranslateElementInit() {
                     }
 
                 }
+
+                window.onload = function()
+                {
+                CheckCookies;
+                }
+
+                document.onkeydown = checkKey;
+
+
 
 
 
