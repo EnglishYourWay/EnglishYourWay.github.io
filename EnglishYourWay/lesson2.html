@@ -326,7 +326,17 @@ function googleTranslateElementInit() {
                     }
                 }
 
+                  function CheckCookies () {
+                  var iNum = document.cookie.split("=");
+                  if (iNum[1] >= "2") {
+                    document.cookie = "lesson=3; expires=Wed, 01 Jan 2019 00:00:01 GMT";
+                  }
 
+                    for (var i = 1; i <= iNum[1]; i++){
+                      document.getElementById(i).style.display = "block";
+                    }
+
+                }
 
                 function plusSlides(n) {
                 showSlides(slideIndex += n);
@@ -355,17 +365,7 @@ function googleTranslateElementInit() {
                     dots[slideIndex-1].className += " active";
                     }                }
 
-                  function CheckCookies () {
-                  var iNum = document.cookie.split("=");
-                  if (iNum[1] >= "2") {
-                    document.cookie = "lesson=3; expires=Wed, 01 Jan 2019 00:00:01 GMT";
-                  }
 
-                    for (var i = 1; i <= iNum[1]; i++){
-                      document.getElementById(i).style.display = "block";
-                    }
-
-                }
 
                 window.onload = function()
                 {
