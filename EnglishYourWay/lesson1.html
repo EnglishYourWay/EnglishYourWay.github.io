@@ -235,7 +235,7 @@ function googleTranslateElementInit() {
 
                 function CheckCookies () {
                 document.cookie = "lesson=2; expires=Wed, 01 Jan 2019 00:00:01 GMT";
-
+                alert(document.cookie);
                 var iNum = document.cookie.split("=");
                     for (var i = 1; i <= iNum[1]; i++){
                       document.getElementById(i).style.display = "block";
