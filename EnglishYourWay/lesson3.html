@@ -300,11 +300,10 @@
 										<li>
 											<span class="opener">Lessons</span>
 											<ul>
-                                                <li><a id="1" class="lessons" href="lessonsnav.html" style="display:none;">View lessons plan</a></li>
-												<li><a id="2" class="lessons" href="lesson1.html" style="display:none;">Lesson 1</a></li>
-                                                <li><a id="3" class="lessons" href="lesson2.html" style="display:none;">Lesson 2</a></li>
-												<li><a id="4" class="lessons" href="lesson3.html" style="display:none;">Lesson 3</a></li>
-												<li><a id="5" class="lessons" href="lesson4.html" style="display:none;">Lesson 4</a></li>
+                                                <li><a id="a1" class="lessons" href="lessonsnav.html" style="display:none;">View lessons plan</a></li>
+												<li><a id="a2" class="lessons" href="lesson1.html" style="display:none;">Lesson 1</a></li>
+                                                <li><a id="a3" class="lessons" href="lesson2.html" style="display:none;">Lesson 2</a></li>
+												<li><a id="a4" class="lessons" href="lesson3.html" style="display:none;">Lesson 3</a></li>
 											</ul>
 										</li>
                                         <li><a href="aboutus.html">About us</a></li>
@@ -382,7 +381,7 @@ function googleTranslateElementInit() {
                   }
 
                     for (var i = 1; i <= iNum[1]; i++){
-                      document.getElementById(i).style.display = "block";
+                      document.getElementById("a" + i).style.display = "block";
                     }
 
                 }

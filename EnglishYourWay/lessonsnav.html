@@ -65,7 +65,7 @@
                                         <table class="notranslate">
                                             <tr>
                                                 <td style="width:200px">
-                                                    <center><button id="8" onclick="window.location.href='lesson2.html'" disabled="">Lesson 2</button></center> <br>
+                                                    <center><button id="a8" onclick="window.location.href='lesson2.html'" disabled="">Lesson 2</button></center> <br>
                                                 </td>
                                                 <td>
                                                     <div class="activitybox" style="width:180px">
@@ -86,7 +86,7 @@
                                         <table class="notranslate">
                                             <tr>
                                                 <td style="width:200px">
-                                                    <center><button id="8" onclick="window.location.href='lesson2.html'" disabled="">Lesson 3</button></center> <br>
+                                                    <center><button id="a9" onclick="window.location.href='lesson2.html'" disabled="">Lesson 3</button></center> <br>
                                                 </td>
                                                 <td>
                                                     <div class="activitybox" style="width:180px">
@@ -142,11 +142,11 @@
 										<li>
 											<span class="opener">Lessons</span>
 											<ul>
-                                                <li><a id="1" class="lessons" href="lessonsnav.html">View lessons plan</a></li>
-												<li><a id="2" class="lessons" href="lesson1.html">Lesson 1</a></li>
-                                                <li><a id="3" class="lessons" href="lesson2.html" style="display:none;">Lesson 2</a></li>
-												<li><a id="4" class="lessons" href="lesson3.html" style="display:none;">Lesson 3</a></li>
-												<li><a id="5" class="lessons" href="lesson4.html" style="display:none;">Lesson 4</a></li>
+                                                <li><a id="a1" class="lessons" href="lessonsnav.html">View lessons plan</a></li>
+												<li><a id="a2" class="lessons" href="lesson1.html">Lesson 1</a></li>
+                                                <li><a id="a3" class="lessons" href="lesson2.html" style="display:none;">Lesson 2</a></li>
+												<li><a id="a4" class="lessons" href="lesson3.html" style="display:none;">Lesson 3</a></li>
+												<li><a id="a5" class="lessons" href="lesson4.html" style="display:none;">Lesson 4</a></li>
 											</ul>
 										</li>
                                         <li><a href="aboutus.html">About us</a></li>
@@ -208,10 +208,10 @@ function googleTranslateElementInit() {
 
                   var iNum = document.cookie.split("=");
                     for (var i = 1; i <= iNum[1]; i++){
-                      document.getElementById(i).style.display = "block";
+                      document.getElementById("a" + i).style.display = "block";
                     }
                     for (var i = 3; i <= iNum[1]; i++){
-                      document.getElementById(i + 5).disabled = false;
+                      document.getElementById("a" + i + 5).disabled = false;
                     }
 
                 }
